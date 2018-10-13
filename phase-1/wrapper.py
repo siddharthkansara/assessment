@@ -34,9 +34,9 @@ class Markit:
 			alpha = [quote,b]
 			return alpha
 		except ValueError:
-			return 0
+			return False
 		except KeyError:
-			return 0
+			return False
 
 	def get_quote_update(self,string):
 

@@ -135,11 +135,11 @@ class Tdb:
 
 		return check
 
-	def stocknames(self):
+	def stocknames(self,userid):
 
 		self.conn = sqlite3.connect('trade_db.db')
 		self.cur = self.conn.cursor()
-		self.cur.execute("SELECT id,stock_name,quantity from stocks;")
+		self.cur.execute("SELECT stock_name,quantity,id from stocks;")
 		names = self.cur.fetchall()
 
 		return names
